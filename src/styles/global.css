@@ -1,3 +1,28 @@
+/* Inter Variable supported on Modern Browsers */
+@font-face {
+    font-family: "JetBrainsMono Variable";
+    src: url(/fonts/JetBrainsMono[wght].ttf) format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+
+}
+
+/* Inter Variable Italic supported on Modern Browsers */
+@font-face {
+    font-family: "JetBrainsMono Variable";
+    src: url(/fonts/JetBrainsMono-Italic[wght].ttf) format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+:root {
+    --light-mode-bg-color: white;
+    --light-mode-font-color: black;
+    --dark-mode-bg-color: #15202B;
+    /* twitter dark mode bg  */
+    --dark-mode-font-color: white;
+}
+
 * {
     box-sizing: border-box;
     /* border: 1px solid red; */
@@ -8,14 +33,51 @@
 html {
     max-height: 100vh;
     max-width: 720px;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0;
+    font-family: "JetBrainsMono Variable", "Times New Roman";
+    font-size: 13px;
+
+}
+
+body {
+    background-color: var(--light-mode-bg-color);
+    color: var(--light-mode-font-color);
 }
 
 a:link,
 a:visited,
 a:active {
     color: blue;
+}
+
+.nav-item.mode-button {
+    color: blue;
+    padding-left: .5rem;
+    border-radius: 5px;
+    border: 1px solid blue;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.dark-mode {
+    background-color: var(--dark-mode-bg-color);
+    color: var(--dark-mode-font-color);
+}
+
+.dark-mode .nav-item.mode-button {
+    color: #1d9bf0;
+    padding-left: .5rem;
+    border-radius: 5px;
+    border: 1px solid #1d9bf0;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.dark-mode a:link,
+.dark-mode a:visited,
+.dark-mode a:active {
+    color: #1d9bf0;
 }
 
 h1,
