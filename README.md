@@ -1,6 +1,6 @@
-# My website: <https://mihircodes.com>
+# My minimal website: [mihircodes.com](https://mihircodes.com)
 
-Built using Astro.build
+Built using [Astro](https://astro.build)
 
 ## 🚀 Project Structure
 

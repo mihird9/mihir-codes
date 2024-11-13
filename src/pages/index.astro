@@ -70,14 +70,16 @@ import "../../src/styles/global.css";
 					web applications
 				</li>
 				<li>
-					<strong>Blog Writing:</strong> Technical and non-technical blogs
+					<strong>Blog Writing:</strong> Technical blogs (related to Python,
+					JavaScript, Web Development, Software Development, Linux) and
+					non-technical blogs
 				</li>
 			</ul>
 			<p>
 				&gt;&gt;&gt;
 				<a
 					href="https://cal.com/mihird9/free-15-min-intro-call-copy"
-					target="_blank">Schedule a call</a
+					target="_blank">Schedule a 15min call</a
 				> &lt;&lt;&lt;
 			</p>
 		</section>
@@ -99,12 +101,12 @@ import "../../src/styles/global.css";
 			<h2>Tools & Technologies I use:</h2>
 			<ul class="tech-list">
 				<li>
-					<strong>Programming Languages:</strong> Python, JavaScript/Nodejs,
-					TypeScript, Bash, SQL
+					<strong>Languages:</strong> Python, JavaScript/Node.js, TypeScript,
+					SQL, Bash, HTML, CSS
 				</li>
 				<li>
-					<strong>Web technologies:</strong> React, Express, Django, Flask,
-					Astro, HTML, CSS
+					<strong>Frameworks/Libraries:</strong> React, Express, Django,
+					Flask, Astro, Tailwind CSS
 				</li>
 				<li>
 					<strong>Databases:</strong> PostgreSQL, SQLite, MS SQL Server,
@@ -119,7 +121,7 @@ import "../../src/styles/global.css";
 			<p id="end-square">&#x2B1B;</p>
 			<div class="note">
 				<small>&copy; Mihir Dixit</small><br />
-				<small>last updated on: 2024-11-12</small>
+				<small>last updated on: 2024-11-13</small>
 			</div>
 		</footer>
 
@@ -134,13 +136,14 @@ import "../../src/styles/global.css";
 				} else if (modeButton.innerText === "☀️") {
 					modeButton.innerText = "🌙";
 				}
-				// let endSquare = document.getElementById("end-square");
-				// console.log(endSquare.innerText);
-				// if (endSquare.innerText === "&#x2B1B;") {
-				// 	endSquare.innerText = "&#x2B1C;";
-				// } else if (endSquare.innerText === "&#x2B1C;") {
-				// 	endSquare.innerText = "&#x2B1B;";
-				// }
+
+				let endSquare = document.getElementById("end-square");
+				console.log(endSquare.innerText);
+				if (endSquare.innerText === "⬛") {
+					endSquare.innerText = "⬜";
+				} else if (endSquare.innerText === "⬜") {
+					endSquare.innerText = "⬛";
+				}
 			}
 
 			let modeButton = document.getElementById("mode-toggle");
