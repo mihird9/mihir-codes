@@ -52,12 +52,18 @@ a:active {
 }
 
 .nav-item.mode-button {
-    color: blue;
-    padding-left: .5rem;
-    border-radius: 5px;
-    border: 1px solid blue;
+    padding: 1rem;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
     cursor: pointer;
     margin-left: auto;
+}
+
+.nav-item.mode-button:hover {
+    border: 1px solid #dadada;
+    background-color: #dadada;
 }
 
 .dark-mode {
@@ -66,12 +72,18 @@ a:active {
 }
 
 .dark-mode .nav-item.mode-button {
-    color: #1d9bf0;
-    padding-left: .5rem;
-    border-radius: 5px;
-    border: 1px solid #1d9bf0;
+    padding: 1rem;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--dark-mode-bg-color);
     cursor: pointer;
     margin-left: auto;
+}
+
+.dark-mode .nav-item.mode-button:hover {
+    border: 1px solid #444d55;
+    background-color: #444d55;
 }
 
 .dark-mode a:link,
@@ -83,7 +95,7 @@ a:active {
 h1,
 h2,
 h3 {
-    padding: .5rem 1rem;
+    padding: .75rem 1rem 0;
 }
 
 p {
@@ -94,17 +106,15 @@ p {
     display: flex;
     list-style: none;
     justify-content: flex-start;
-    padding: .75rem 1rem;
+    align-items: center;
+    padding: 0 1rem;
+    /* padding-top: .75rem; */
 }
 
 .nav-item {
     padding-right: 1rem;
     text-align: left;
     margin: 0;
-}
-
-.link-list {
-    padding: 0 3rem;
 }
 
 .tech-list {
@@ -122,10 +132,13 @@ p {
 
 .footer {
     padding-top: 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .note {
-    padding: 1rem 1rem;
-    font-style: italic;
+    padding: .5rem 1rem 0;
+}
+
+.footer p {
+    padding: 1rem 1rem 0;
 }
