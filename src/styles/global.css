@@ -1,13 +1,12 @@
-/* Inter Variable supported on Modern Browsers */
+/* JetBrains Mono Variable supported on Modern Browsers */
 @font-face {
     font-family: "JetBrainsMono Variable";
     src: url(/fonts/JetBrainsMono[wght].ttf) format("truetype");
     font-weight: 100 900;
     font-style: normal;
-
 }
 
-/* Inter Variable Italic supported on Modern Browsers */
+/* JetBrains Mono Italic Variable supported on Modern Browsers */
 @font-face {
     font-family: "JetBrainsMono Variable";
     src: url(/fonts/JetBrainsMono-Italic[wght].ttf) format("truetype");
@@ -35,7 +34,7 @@ html {
     max-width: 720px;
     line-height: 1.6;
     margin: 0;
-    font-family: "JetBrainsMono Variable", "Times New Roman";
+    font-family: "JetBrainsMono Variable", monospace;
     font-size: 13px;
 
 }
@@ -82,8 +81,8 @@ a:active {
 }
 
 .dark-mode .nav-item.mode-button:hover {
-    border: 1px solid #444d55;
-    background-color: #444d55;
+    border: 1px solid #454d55;
+    background-color: #454d55;
 }
 
 .dark-mode a:link,
@@ -107,7 +106,7 @@ p {
     list-style: none;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 1rem;
+    padding: .75rem 1rem 0;
     /* padding-top: .75rem; */
 }
 

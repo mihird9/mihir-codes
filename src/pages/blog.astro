@@ -1,0 +1,93 @@
+---
+import "../../src/styles/global.css";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Mihir Codes</title>
+    </head>
+
+    <body class="" id="body-theme">
+        <h1 class="site-title">Hi, I'm Mihir Dixit</h1>
+        <p class="site-subtitle">Welcome to my website.</p>
+
+        <ul class="nav">
+            <li class="nav-item"><a href="/">Home</a>&nbsp;&nbsp;/</li>
+            <li class="nav-item">Blog&nbsp;&nbsp;/</li>
+            <li class="nav-item mode-button" id="mode-toggle">🌙</li>
+        </ul>
+
+        <main>
+            <!-- <ul>
+                <li><a href="/posts/post-1/">Post 1</a></li>
+            </ul> -->
+            <br />
+            <p>Coming soon...</p>
+        </main>
+
+        <footer class="footer">
+            <p id="end-square">&#x2B1B;</p>
+            <div class="note">
+                <small>&copy; Mihir Dixit</small><br />
+            </div>
+        </footer>
+
+        <script>
+            let bodyTheme = document.body;
+            let modeButton = document.getElementById("mode-toggle");
+            let endSquare = document.getElementById("end-square");
+            console.log(localStorage.getItem("theme"));
+
+            function setTheme() {
+                if (localStorage.getItem("theme") === null) {
+                    localStorage.setItem("theme", "light");
+                    modeButton.innerText = "🌙";
+                    endSquare.innerText = "⬛";
+                } else if (localStorage.getItem("theme") === "light") {
+                    modeButton.innerText = "🌙";
+                    endSquare.innerText = "⬛";
+                } else if (localStorage.getItem("theme") === "dark") {
+                    bodyTheme.classList.toggle("dark-mode");
+                    modeButton.innerText = "☀️";
+                    endSquare.innerText = "⬜";
+                }
+            }
+
+            setTheme();
+
+            function toggleTheme() {
+                if (localStorage.getItem("theme") === "light") {
+                    bodyTheme.classList.toggle("dark-mode");
+                    localStorage.setItem("theme", "dark");
+                    toggleUi();
+                } else if (localStorage.getItem("theme") === "dark") {
+                    bodyTheme.classList.toggle("dark-mode");
+                    // modeButton.innerText = "🌙";
+                    localStorage.setItem("theme", "light");
+                    toggleUi();
+                }
+            }
+
+            function toggleUi() {
+                if (modeButton.innerText === "🌙") {
+                    modeButton.innerText = "☀️";
+                } else if (modeButton.innerText === "☀️") {
+                    modeButton.innerText = "🌙";
+                }
+
+                console.log(endSquare.innerText);
+                if (endSquare.innerText === "⬛") {
+                    endSquare.innerText = "⬜";
+                } else if (endSquare.innerText === "⬜") {
+                    endSquare.innerText = "⬛";
+                }
+            }
+
+            modeButton.addEventListener("click", toggleTheme);
+        </script>
+    </body>
+</html>
