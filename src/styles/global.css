@@ -1,19 +1,45 @@
-/* JetBrains Mono Variable supported on Modern Browsers */
+/* jetbrains-mono-regular - latin */
 @font-face {
-    font-family: "JetBrainsMono Variable";
-    src: url(/fonts/JetBrainsMono[wght].ttf) format("truetype");
-    font-weight: 100 900;
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'JetBrains Mono';
     font-style: normal;
-    font-display: optional;
+    font-weight: 400;
+    src: url('/fonts/jetbrains-mono-v20-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* JetBrains Mono Italic Variable supported on Modern Browsers */
+/* jetbrains-mono-italic - latin */
 @font-face {
-    font-family: "JetBrainsMono Variable";
-    src: url(/fonts/JetBrainsMono-Italic[wght].ttf) format("truetype");
-    font-weight: 100 900;
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'JetBrains Mono';
     font-style: italic;
-    font-display: optional;
+    font-weight: 400;
+    src: url('/fonts/jetbrains-mono-v20-latin-italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* jetbrains-mono-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/jetbrains-mono-v20-latin-600.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* jetbrains-mono-600italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'JetBrains Mono';
+    font-style: italic;
+    font-weight: 600;
+    src: url('/fonts/jetbrains-mono-v20-latin-600italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 :root {
@@ -36,7 +62,7 @@ html {
     max-width: 720px;
     line-height: 1.6;
     margin: 0;
-    font-family: "JetBrainsMono Variable", monospace;
+    font-family: "JetBrains Mono", monospace;
     font-size: 13px;
 
 }
