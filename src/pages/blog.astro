@@ -9,6 +9,21 @@ import "../../src/styles/global.css";
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>Mihir Codes</title>
+
+        <link
+            rel="preload"
+            href="/fonts/JetBrainsMono[wght].ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="/fonts/JetBrainsMono-Italic[wght].ttf"
+            as="font"
+            type="font/ttf"
+            crossorigin
+        />
     </head>
 
     <body class="" id="body-theme">
@@ -36,58 +51,6 @@ import "../../src/styles/global.css";
             </div>
         </footer>
 
-        <script>
-            let bodyTheme = document.body;
-            let modeButton = document.getElementById("mode-toggle");
-            let endSquare = document.getElementById("end-square");
-            console.log(localStorage.getItem("theme"));
-
-            function setTheme() {
-                if (localStorage.getItem("theme") === null) {
-                    localStorage.setItem("theme", "light");
-                    modeButton.innerText = "🌙";
-                    endSquare.innerText = "⬛";
-                } else if (localStorage.getItem("theme") === "light") {
-                    modeButton.innerText = "🌙";
-                    endSquare.innerText = "⬛";
-                } else if (localStorage.getItem("theme") === "dark") {
-                    bodyTheme.classList.toggle("dark-mode");
-                    modeButton.innerText = "☀️";
-                    endSquare.innerText = "⬜";
-                }
-            }
-
-            setTheme();
-
-            function toggleTheme() {
-                if (localStorage.getItem("theme") === "light") {
-                    bodyTheme.classList.toggle("dark-mode");
-                    localStorage.setItem("theme", "dark");
-                    toggleUi();
-                } else if (localStorage.getItem("theme") === "dark") {
-                    bodyTheme.classList.toggle("dark-mode");
-                    // modeButton.innerText = "🌙";
-                    localStorage.setItem("theme", "light");
-                    toggleUi();
-                }
-            }
-
-            function toggleUi() {
-                if (modeButton.innerText === "🌙") {
-                    modeButton.innerText = "☀️";
-                } else if (modeButton.innerText === "☀️") {
-                    modeButton.innerText = "🌙";
-                }
-
-                console.log(endSquare.innerText);
-                if (endSquare.innerText === "⬛") {
-                    endSquare.innerText = "⬜";
-                } else if (endSquare.innerText === "⬜") {
-                    endSquare.innerText = "⬛";
-                }
-            }
-
-            modeButton.addEventListener("click", toggleTheme);
-        </script>
+        <script src="/src/scripts/index.js"></script>
     </body>
 </html>
