@@ -8,8 +8,49 @@ import "../../src/styles/global.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+
+		<meta
+			name="description"
+			content="Mihir Dixit's Personal/Portfolio website."
+		/>
+
+		<meta name="robots" content="index,follow" />
+		<meta name="googlebot" content="index,follow" />
+
+		<meta name="google" content="nositelinkssearchbox" />
+
+		<link rel="canonical" href="https://mihircodes.com" />
+
+		<!-- Facebook Opengraph Protocol -->
+		<meta property="og:title" content="Mihir Dixit's Personal website." />
+		<meta property="og:url" content="https://mihircodes.com" />
+		<meta property="og:type" content="website" />
+		<!-- <meta property="og:image" content="https://mihircodes.com"> -->
+		<!-- <meta property="og:image:alt" content="" /> -->
+		<meta
+			property="og:description"
+			content="Mihir Dixit's Personal/Portfolio website."
+		/>
+		<meta property="og:site_name" content="Mihir Codes" />
+		<meta property="og:locale" content="en_US" />
+
+		<!-- Twitter Cards -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:widgets:new-embed-design" content="on" />
+		<meta name="twitter:site" content="@mihird9" />
+		<meta name="og:url" content="https://mihircodes.com" />
+		<meta name="og:title" content="Mihir Dixit's Personal website." />
+		<meta
+			name="og:description"
+			content="Mihir Dixit's Personal/Portfolio website."
+		/>
+		<!-- <meta name="twitter:image" content="https://mihircodes.com" /> -->
+
 		<title>Mihir Codes</title>
 
+		<link rel="preload" as="script" href="/src/scripts/set-theme.js" />
+
+		<!-- Preload the fonts only on the index page -->
 		<link
 			rel="preload"
 			href="/fonts/jetbrains-mono-v20-latin-regular.woff2"
@@ -20,18 +61,21 @@ import "../../src/styles/global.css";
 	</head>
 
 	<body class="" id="body-theme">
+		<ul class="nav">
+			<li class="nav-item">Home&nbsp;&nbsp;/</li>
+			<li class="nav-item"><a href="/blog/">Blog</a>&nbsp;&nbsp;/</li>
+			<li class="nav-item">
+				<a href="/blogroll/">Blogroll</a>&nbsp;&nbsp;/
+			</li>
+			<li class="nav-item mode-button" id="mode-toggle">🌙</li>
+		</ul>
+
 		<h1 class="site-title">Hi, I'm Mihir Dixit</h1>
 		<p class="site-subtitle">Welcome to my website.</p>
 
 		<!-- <ul>
 			<li></li>
 		</ul> -->
-
-		<ul class="nav">
-			<li class="nav-item">Home&nbsp;&nbsp;/</li>
-			<li class="nav-item"><a href="/blog/">Blog</a>&nbsp;&nbsp;/</li>
-			<li class="nav-item mode-button" id="mode-toggle">🌙</li>
-		</ul>
 
 		<section>
 			<h2>About me</h2>
@@ -45,9 +89,9 @@ import "../../src/styles/global.css";
 			</p>
 			<ul class="interest-list">
 				<li>
-					<strong>Professional Interests:</strong> Web Development, Design,
-					Software Development, SaaS (Software as a Service), Data and
-					Analytics, Machine Learning/AI/LLMs
+					<strong>Professional Interests:</strong> Software/Web Development
+					(Frontend, Backend, APIs), UI Design, SaaS (Software as a Service),
+					Data and Analytics, Machine Learning/AI/LLMs
 				</li>
 				<li>
 					<strong>Other Interests:</strong> Writing, Sketching, Anime,
@@ -118,8 +162,8 @@ import "../../src/styles/global.css";
 					SQL, Bash, HTML, CSS
 				</li>
 				<li>
-					<strong>Frameworks/Libraries:</strong> React, Express, Django,
-					Flask, Astro, Tailwind CSS
+					<strong>Frameworks/Libraries:</strong> React, Express, Astro,
+					Django, Flask, FastAPI, Tailwind CSS
 				</li>
 				<li>
 					<strong>Databases:</strong> PostgreSQL, SQLite, MS SQL Server,
