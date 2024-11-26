@@ -42,6 +42,28 @@
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* Inter variable normal */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    src: url('/fonts/Inter-VariableFont_opsz\,wght.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* Inter variable italic */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 100 900;
+    src: url('/fonts/Inter-Italic-VariableFont_opsz\,wght.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
     --light-mode-bg-color: white;
     --light-mode-font-color: black;
@@ -62,7 +84,8 @@ html {
     max-width: 720px;
     line-height: 1.6;
     margin: 0;
-    font-family: "JetBrains Mono", monospace;
+    /* font-family: "JetBrains Mono", monospace; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 13px;
 
 }
@@ -123,6 +146,7 @@ h1,
 h2,
 h3 {
     padding: .75rem 1rem 0;
+    font-family: "Inter";
 }
 
 p {
