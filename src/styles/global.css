@@ -86,8 +86,8 @@ html {
     margin: 0;
     /* font-family: "JetBrains Mono", monospace; */
     font-family: "Inter", Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
 
 }
 
@@ -146,7 +146,7 @@ a:active {
 h1,
 h2,
 h3 {
-    padding: .75rem 1rem 0;
+    padding: 0 1rem;
     font-family: "Inter";
 }
 
@@ -167,6 +167,26 @@ p {
     padding-right: 1rem;
     text-align: left;
     margin: 0;
+}
+
+.header {
+    padding: .5rem 0;
+}
+
+.about {
+    padding: 1rem 0;
+}
+
+.contact {
+    padding: 1rem 0;
+}
+
+.projects {
+    padding: 1rem 0;
+}
+
+.tools {
+    padding: 1rem 0;
 }
 
 .tech-list {
