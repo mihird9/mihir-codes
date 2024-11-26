@@ -1,0 +1,42 @@
+---
+import "../../src/styles/global.css";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+
+        <title>404 | Mihir Codes</title>
+
+        <link rel="preload" as="script" href="/src/scripts/set-theme.js" />
+    </head>
+
+    <body class="" id="body-theme">
+        <ul class="nav">
+            <li class="nav-item"><a href="/">Home</a> &nbsp;&nbsp;/</li>
+            <li class="nav-item"><a href="/blog/">Blog</a>&nbsp;&nbsp;/</li>
+            <li class="nav-item">
+                <a href="/blogroll/">Blogroll</a>&nbsp;&nbsp;/
+            </li>
+            <li class="nav-item mode-button" id="mode-toggle">🌙</li>
+        </ul>
+
+        <header>
+            <h1 class="site-title">404</h1>
+            <p class="site-subtitle">Page not found.</p>
+            <p>Go back to <a href="/">Homepage</a>.</p>
+        </header>
+
+        <footer class="footer">
+            <p id="end-square">&#x2B1B;</p>
+            <div class="note">
+                <small>&copy; Mihir Dixit</small>
+            </div>
+        </footer>
+
+        <script src="/src/scripts/index.js"></script>
+    </body>
+</html>
