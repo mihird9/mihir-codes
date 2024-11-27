@@ -82,12 +82,12 @@
 html {
     max-height: 100vh;
     max-width: 720px;
-    line-height: 1.6;
+    line-height: 1.5;
     margin: 0;
     /* font-family: "JetBrains Mono", monospace; */
     font-family: "Inter", sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 300;
 
 }
 
@@ -97,8 +97,27 @@ body {
 }
 
 a:link,
-a:visited,
+a:visited {
+    color: blue;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+
 a:active {
+    color: red;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+.highlight {}
+
+.out-arrow {
     color: blue;
 }
 
@@ -145,13 +164,31 @@ a:active {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     padding: 0 1rem;
     font-family: "Inter", sans-serif;
 }
 
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
 p {
     padding: 0 1rem;
+    z-index: 10;
 }
 
 .nav {
