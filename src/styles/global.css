@@ -115,7 +115,9 @@ a:hover {
     border-bottom: 1px solid;
 }
 
-.highlight {}
+.highlight {
+    font-weight: 500;
+}
 
 .out-arrow {
     color: blue;
@@ -166,7 +168,7 @@ h1,
 h2,
 h3,
 h4 {
-    padding: 0 1rem;
+    padding: 0 1rem .2rem;
     font-family: "Inter", sans-serif;
 }
 
@@ -187,7 +189,7 @@ h4 {
 }
 
 p {
-    padding: 0 1rem;
+    padding: 0.1rem 1rem;
     z-index: 10;
 }
 
@@ -216,6 +218,23 @@ p {
 
 .contract {
     padding: .5rem 0;
+}
+
+a.cta-button {
+    position: relative;
+    top: 0px;
+    background-color: blue;
+    color: white;
+    padding: .25rem .5rem;
+    font-weight: 400;
+    border-bottom: none;
+    box-shadow: 2px 2px black;
+    transform: top .2s box-shadow .2s;
+}
+
+a.cta-button:hover {
+    top: 2px;
+    box-shadow: 0 1px black;
 }
 
 .projects {
@@ -250,4 +269,21 @@ p {
 
 .footer p {
     padding: 1rem 1rem 0;
+}
+
+table {
+    margin: 1rem;
+    border-bottom: 1px solid gray;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: .2rem;
+    /* border: 1px solid gray; */
+}
+
+td {
+    padding: .2rem;
+    border: 1px solid gray;
 }
