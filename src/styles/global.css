@@ -223,8 +223,8 @@ p {
 a.cta-button {
     position: relative;
     top: 0px;
-    background-color: blue;
-    color: white;
+    background-color: #cccccc;
+    color: black;
     padding: .25rem .5rem;
     font-weight: 400;
     border-bottom: none;
@@ -234,7 +234,7 @@ a.cta-button {
 
 a.cta-button:hover {
     top: 2px;
-    box-shadow: 0 1px black;
+    box-shadow: 1px 1px black;
 }
 
 .projects {
