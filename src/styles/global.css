@@ -149,9 +149,9 @@ p {
     /* border-bottom: 1px dotted var(--link-color); */
 }
 
-.index-table tr:hover {
+/* .index-table tr:hover {
     background-color: #265599;
-}
+} */
 
 .col-1 {
     width: 30%;
@@ -221,9 +221,9 @@ a.cta-button:hover {
     /* border: 1px solid gray; */
 }
 
-.reading-table tr:hover {
+/* .reading-table tr:hover {
     background-color: #265599;
-}
+} */
 
 .reading-table td {
     padding: .5rem .2rem 0;
