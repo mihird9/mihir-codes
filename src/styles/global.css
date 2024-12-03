@@ -1,47 +1,3 @@
-/* jetbrains-mono-regular - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'JetBrains Mono';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/jetbrains-mono-v20-latin-regular.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* jetbrains-mono-italic - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'JetBrains Mono';
-    font-style: italic;
-    font-weight: 400;
-    src: url('/fonts/jetbrains-mono-v20-latin-italic.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* jetbrains-mono-600 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'JetBrains Mono';
-    font-style: normal;
-    font-weight: 600;
-    src: url('/fonts/jetbrains-mono-v20-latin-600.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* jetbrains-mono-600italic - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'JetBrains Mono';
-    font-style: italic;
-    font-weight: 600;
-    src: url('/fonts/jetbrains-mono-v20-latin-600italic.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
 /* Inter variable normal */
 @font-face {
     font-display: swap;
@@ -65,52 +21,57 @@
 }
 
 :root {
-    --light-mode-bg-color: white;
-    --light-mode-font-color: black;
-    --dark-mode-bg-color: #15202B;
-    /* twitter dark mode bg  */
-    --dark-mode-font-color: white;
+    --bg-color: #23408eff;
+    --font-color-light: #fcfcfcff;
+    --font-color-dark: #000000ff;
+    --link-color: #ccbf00ff;
+    --link-color-active: #cc232aff;
+    --selection-color: #0b9444ff;
+    --gray-color: #292929ff;
+    --page-width: 1024px;
+}
+
+::selection {
+    background: var(--selection-color);
 }
 
 * {
     box-sizing: border-box;
-    /* border: 1px solid red; */
     margin: 0 auto;
     padding: 0;
+    /* border: 1px solid red; */
 }
 
 html {
-    max-height: 100vh;
-    max-width: 720px;
-    line-height: 1.5;
-    margin: 0;
-    /* font-family: "JetBrains Mono", monospace; */
+    max-width: var(--page-width);
+    line-height: 1.4;
+    margin: 2rem auto;
     font-family: "Inter", sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 300;
-
+    overflow-x: hidden;
 }
 
 body {
-    background-color: var(--light-mode-bg-color);
-    color: var(--light-mode-font-color);
+    background-color: var(--bg-color);
+    color: var(--font-color-light);
 }
 
 a:link,
 a:visited {
-    color: blue;
+    color: var(--link-color);
     text-decoration: none;
     border-bottom: 1px dotted;
 }
 
 a:active {
-    color: red;
+    color: var(--link-color-active);
     text-decoration: none;
     border-bottom: 1px solid;
 }
 
 a:hover {
-    color: blue;
+    color: var(--link-color);
     text-decoration: none;
     border-bottom: 1px solid;
 }
@@ -120,48 +81,7 @@ a:hover {
 }
 
 .out-arrow {
-    color: blue;
-}
-
-.nav-item.mode-button {
-    padding: .3rem;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    border: 1px solid white;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-.nav-item.mode-button:hover {
-    border: 1px solid #dadada;
-    background-color: #dadada;
-}
-
-.dark-mode {
-    background-color: var(--dark-mode-bg-color);
-    color: var(--dark-mode-font-color);
-}
-
-.dark-mode .nav-item.mode-button {
-    padding: .3rem;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    border: 1px solid var(--dark-mode-bg-color);
-    cursor: pointer;
-    margin-left: auto;
-}
-
-.dark-mode .nav-item.mode-button:hover {
-    border: 1px solid #454d55;
-    background-color: #454d55;
-}
-
-.dark-mode a:link,
-.dark-mode a:visited,
-.dark-mode a:active {
-    color: #1d9bf0;
+    color: var(--link-color);
 }
 
 h1,
@@ -173,23 +93,17 @@ h4 {
 }
 
 h1 {
-    font-size: 22px;
+    font-size: 17px;
 }
 
 h2 {
-    font-size: 20px;
-}
-
-h3 {
-    font-size: 18px;
-}
-
-h4 {
-    font-size: 16px;
+    font-size: 15px;
+    padding-top: .5rem;
+    /* border-bottom: 1px dotted var(--link-color); */
 }
 
 p {
-    padding: 0.1rem 1rem;
+    padding: .2rem 1rem 0.5rem;
     z-index: 10;
 }
 
@@ -209,53 +123,66 @@ p {
 }
 
 .header {
-    padding: .5rem 0;
+    padding: .5rem 0 0;
+}
+
+.page-title {
+    padding: 1rem 1rem 0;
+}
+
+.index-table {
+    margin: 0 1rem;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 92%;
+}
+
+.index-table td {
+    border: 0;
+    padding: 0.2rem 0 .5rem;
+    /* border-bottom: 1px dotted var(--link-color); */
+}
+
+.col-1 {
+    width: 30%;
+    vertical-align: top;
+    font-style: italic;
 }
 
 .about {
-    padding: .5rem 0;
+    padding: 1rem 0;
+    max-width: var(--page-width);
 }
 
 .contract {
-    padding: .5rem 0;
+    padding: 1rem 0;
+    max-width: var(--page-width);
 }
 
 a.cta-button {
     position: relative;
     top: 0px;
-    background-color: #cccccc;
-    color: black;
+    background-color: var(--link-color);
+    color: var(--font-color-dark);
     padding: .25rem .5rem;
     font-weight: 400;
     border-bottom: none;
-    box-shadow: 2px 2px black;
+    box-shadow: 2px 2px var(--gray-color);
     transform: top .2s box-shadow .2s;
 }
 
 a.cta-button:hover {
     top: 2px;
-    box-shadow: 1px 1px black;
+    box-shadow: 1px 1px var(--gray-color);
 }
 
 .projects {
-    padding: .5rem 0;
+    padding: 1rem 0;
 }
 
 .tools {
-    padding: .5rem 0;
-}
-
-.tech-list {
-    padding: 0 3rem;
-}
-
-.interest-list {
-    padding: 1rem 3rem;
-    /* list-style: none; */
-}
-
-.freelance-list {
-    padding: 1rem 3rem;
+    padding: 1rem 0;
+    max-width: var(--page-width);
 }
 
 .footer {
@@ -271,19 +198,20 @@ a.cta-button:hover {
     padding: 1rem 1rem 0;
 }
 
-table {
+.reading-table {
     margin: 1rem;
-    border-bottom: 1px solid gray;
+    /* border-bottom: 1px solid gray; */
     border-collapse: collapse;
+    width: 70%;
 }
 
-th {
+.reading-table th {
     text-align: left;
-    padding: .2rem;
+    padding: .2rem .2rem .5rem;
     /* border: 1px solid gray; */
 }
 
-td {
-    padding: .2rem;
-    border: 1px solid gray;
+.reading-table td {
+    padding: .5rem .2rem 0;
+    /* border-bottom: 2px dotted var(--link-color); */
 }
