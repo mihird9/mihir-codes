@@ -52,6 +52,12 @@ html {
     overflow-x: hidden;
 }
 
+@media only screen and (max-width : 720px) {
+    html {
+        margin: .5rem auto;
+    }
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--font-color-light);
@@ -203,7 +209,7 @@ a.cta-button:hover {
 }
 
 .reading-table {
-    margin: 1rem;
+    margin: 0 1rem;
     /* border-bottom: 1px solid gray; */
     border-collapse: collapse;
     width: 90%;
