@@ -143,6 +143,10 @@ p {
     /* border-bottom: 1px dotted var(--link-color); */
 }
 
+.index-table tr:hover {
+    background-color: #265599;
+}
+
 .col-1 {
     width: 30%;
     vertical-align: top;
@@ -202,13 +206,17 @@ a.cta-button:hover {
     margin: 1rem;
     /* border-bottom: 1px solid gray; */
     border-collapse: collapse;
-    width: 70%;
+    width: 90%;
 }
 
 .reading-table th {
     text-align: left;
     padding: .2rem .2rem .5rem;
     /* border: 1px solid gray; */
+}
+
+.reading-table tr:hover {
+    background-color: #265599;
 }
 
 .reading-table td {
