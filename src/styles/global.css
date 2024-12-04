@@ -133,7 +133,7 @@ p {
 }
 
 .page-title {
-    padding: 1rem 1rem 0;
+    padding: 2rem 1rem 0;
 }
 
 .index-table {
@@ -160,12 +160,12 @@ p {
 }
 
 .about {
-    padding: 1rem 0;
+    padding: 2rem 0 2rem;
     max-width: var(--page-width);
 }
 
 .freelance {
-    padding: 1rem 0;
+    padding: 1rem 0 2rem;
     max-width: var(--page-width);
 }
 
@@ -187,11 +187,11 @@ a.cta-button:hover {
 }
 
 .projects {
-    padding: 1rem 0;
+    padding: 1rem 0 2rem;
 }
 
 .tools {
-    padding: 1rem 0;
+    padding: 1rem 0 2rem;
     max-width: var(--page-width);
 }
 
