@@ -22,7 +22,8 @@
 
 :root {
     --bg-color: #23408eff;
-    --font-color-light: #fcfcfcff;
+    --font-color-heading-light: #fcfcfcff;
+    --font-color-light: #f2f2f2;
     --font-color-dark: #000000ff;
     --link-color: #ccbf00ff;
     --link-color-active: #cc232aff;
@@ -82,10 +83,6 @@ a:hover {
     border-bottom: 1px solid;
 }
 
-.highlight {
-    font-weight: 500;
-}
-
 .out-arrow {
     color: var(--link-color);
 }
@@ -96,6 +93,7 @@ h3,
 h4 {
     padding: 0 1rem .2rem;
     font-family: "Inter", sans-serif;
+    color: var(--font-color-heading-light);
 }
 
 h1 {
@@ -104,8 +102,7 @@ h1 {
 
 h2 {
     font-size: 15px;
-    padding-top: .5rem;
-    /* border-bottom: 1px dotted var(--link-color); */
+    padding: .5rem 1rem;
 }
 
 p {
@@ -185,6 +182,10 @@ p {
     .freelance {
         padding: 1rem 0 1rem;
     }
+}
+
+.freelance-cta {
+    padding-top: 2rem;
 }
 
 a.cta-button {
