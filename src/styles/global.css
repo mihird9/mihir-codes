@@ -136,6 +136,12 @@ p {
     padding: 2rem 1rem 0;
 }
 
+@media only screen and (max-width : 720px) {
+    .page-title {
+        padding: 1rem 1rem 0;
+    }
+}
+
 .index-table {
     margin: 0 1rem;
     table-layout: fixed;
@@ -164,9 +170,21 @@ p {
     max-width: var(--page-width);
 }
 
+@media only screen and (max-width : 720px) {
+    .about {
+        padding: 1rem 0 1rem;
+    }
+}
+
 .freelance {
     padding: 1rem 0 2rem;
     max-width: var(--page-width);
+}
+
+@media only screen and (max-width : 720px) {
+    .freelance {
+        padding: 1rem 0 1rem;
+    }
 }
 
 a.cta-button {
@@ -190,9 +208,21 @@ a.cta-button:hover {
     padding: 1rem 0 2rem;
 }
 
+@media only screen and (max-width : 720px) {
+    .projects {
+        padding: 1rem 0 1rem;
+    }
+}
+
 .tools {
     padding: 1rem 0 2rem;
     max-width: var(--page-width);
+}
+
+@media only screen and (max-width : 720px) {
+    .tools {
+        padding: 1rem 0 1rem;
+    }
 }
 
 .footer {
