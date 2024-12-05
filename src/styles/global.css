@@ -40,7 +40,7 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
-    /* border: 1px solid red; */
+    /* border: 1px solid #cc232aff; */
 }
 
 html {
@@ -149,6 +149,7 @@ p {
 .index-table td {
     border: 0;
     padding: 0.2rem 0 .5rem;
+    vertical-align: top;
     /* border-bottom: 1px dotted var(--link-color); */
 }
 
@@ -208,6 +209,12 @@ a.cta-button:hover {
 .projects {
     padding: 1rem 0 2rem;
 }
+
+/* .project-item {
+    display: flex;
+    justify-content: start;
+    margin: 0 1rem;
+} */
 
 @media only screen and (max-width : 720px) {
     .projects {
