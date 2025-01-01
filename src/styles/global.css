@@ -173,9 +173,15 @@ p {
 } */
 
 .col-1 {
-    width: 30%;
+    width: 22%;
     vertical-align: top;
     font-style: italic;
+}
+
+@media only screen and (max-width : 720px) {
+    .col-1 {
+        width: 30%;
+    }
 }
 
 .about {
@@ -227,6 +233,7 @@ a.cta-button:hover {
 
 .projects p {
     margin: 0 3rem;
+    padding: 0;
 }
 
 @media only screen and (max-width : 720px) {
@@ -339,7 +346,7 @@ a.cta-button:hover {
 }
 
 .author-col {
-    width: 45%;
+    width: 50%;
     vertical-align: top;
 }
 
