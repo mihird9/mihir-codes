@@ -211,6 +211,7 @@ p {
 }
 
 a.cta-button {
+    display: inline-block;
     position: relative;
     top: 0px;
     background-color: var(--link-color);
