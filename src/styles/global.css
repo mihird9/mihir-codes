@@ -58,13 +58,14 @@
   /* --selection-color: #0b9444ff; */
   --selection-color: #ffe629;
   --gray-color: #404040;
-  --page-width: 1024px;
+  /* --page-width: 1024px; */
+  --page-width: 920px;
 }
 
-::selection {
+/* ::selection {
   background: var(--selection-color);
-  /* color: var(--font-color-dark); */
-}
+  color: var(--font-color-dark);
+} */
 
 * {
   box-sizing: border-box;
@@ -76,7 +77,8 @@
 html {
   max-width: var(--page-width);
   line-height: 1.4;
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
+  margin: 2rem;
   font-family: "Inter", sans-serif;
   /* font-family: "Work Sans", sans-serif; */
   font-size: 14px;
