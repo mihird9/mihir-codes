@@ -1,4 +1,4 @@
-# My minimal website: [mihircodes.com](https://mihircodes.com)
+# My website: [MihirDixit.com](https://mihirdixit.com)
 
 Built using [Astro](https://astro.build)
 
