@@ -42,6 +42,17 @@
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* Margherita Regular normal */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Margherita";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Margherita-Regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
   /* --bg-color: #23408eff; */
   --bg-color: #fcfcfc;
@@ -127,7 +138,8 @@ h3,
 h4 {
   padding: 0 1rem 0.2rem;
   /* font-family: "Inter", sans-serif; */
-  font-family: "Instrument Serif", serif;
+  /* font-family: "Instrument Serif", serif; */
+  font-family: "Margherita", serif;
   font-weight: 400;
   /* letter-spacing: -0.01em; */
   color: var(--font-color-heading-light);
@@ -135,12 +147,12 @@ h4 {
 
 h1 {
   /* font-size: 18px; */
-  font-size: 22px;
+  font-size: 24px;
 }
 
 h2 {
   /* font-size: 16px; */
-  font-size: 20px;
+  font-size: 22px;
   padding: 0.5rem 1rem;
 }
 
