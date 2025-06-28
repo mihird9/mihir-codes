@@ -137,22 +137,22 @@ h2,
 h3,
 h4 {
   padding: 0 1rem 0.2rem;
-  /* font-family: "Inter", sans-serif; */
+  font-family: "Inter", sans-serif;
   /* font-family: "Instrument Serif", serif; */
-  font-family: "Margherita", serif;
+  /* font-family: "Margherita", serif; */
   font-weight: 400;
   /* letter-spacing: -0.01em; */
   color: var(--font-color-heading-light);
 }
 
 h1 {
-  /* font-size: 18px; */
-  font-size: 24px;
+  font-size: 18px;
+  /* font-size: 20px; */
 }
 
 h2 {
-  /* font-size: 16px; */
-  font-size: 22px;
+  font-size: 16px;
+  /* font-size: 17px; */
   padding: 0.5rem 1rem;
 }
 
