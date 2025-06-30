@@ -1,79 +1,90 @@
 ---
+import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
 import "../../src/styles/global.css";
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
 
-        <meta name="description" content="My writing. Coming soon." />
+    <meta name="description" content="My writing. Coming soon." />
 
-        <meta name="robots" content="index,follow" />
-        <meta name="googlebot" content="index,follow" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
 
-        <meta name="google" content="nositelinkssearchbox" />
+    <meta name="google" content="nositelinkssearchbox" />
 
-        <link rel="canonical" href="https://mihirdixit.com/blog/" />
+    <link rel="canonical" href="https://mihirdixit.com/blog/" />
 
-        <!-- Facebook Opengraph Protocol -->
-        <meta property="og:title" content="Blog | Mihir Dixit" />
-        <meta property="og:url" content="https://mihirdixit.com/blog/" />
-        <meta property="og:type" content="website" />
-        <meta
-            property="og:image"
-            content="https://mihirdixit.com/img/mihircodes_blog.png"
-        />
-        <!-- <meta property="og:image:alt" content="" /> -->
-        <meta property="og:description" content="My writing. Coming soon." />
-        <meta property="og:site_name" content="Mihir Codes" />
-        <meta property="og:locale" content="en_US" />
+    <!-- Facebook Opengraph Protocol -->
+    <meta property="og:title" content="Blog | Mihir Dixit" />
+    <meta property="og:url" content="https://mihirdixit.com/blog/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://mihirdixit.com/img/mihircodes_blog.png"
+    />
+    <!-- <meta property="og:image:alt" content="" /> -->
+    <meta property="og:description" content="My writing. Coming soon." />
+    <meta property="og:site_name" content="Mihir Codes" />
+    <meta property="og:locale" content="en_US" />
 
-        <!-- Twitter Cards -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:widgets:new-embed-design" content="on" />
-        <meta name="twitter:site" content="@mihirdx" />
-        <meta name="twitter:url" content="https://mihirdixit.com/blog/" />
-        <meta name="twitter:title" content="Blog | Mihir Dixit" />
-        <meta name="twitter:description" content="My writing. Coming soon." />
-        <meta
-            name="twitter:image"
-            content="https://mihirdixit.com/img/mihircodes_blog.png"
-        />
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:widgets:new-embed-design" content="on" />
+    <meta name="twitter:site" content="@mihirdx" />
+    <meta name="twitter:url" content="https://mihirdixit.com/blog/" />
+    <meta name="twitter:title" content="Blog | Mihir Dixit" />
+    <meta name="twitter:description" content="My writing. Coming soon." />
+    <meta
+      name="twitter:image"
+      content="https://mihirdixit.com/img/mihircodes_blog.png"
+    />
 
-        <title>Blog | MihirDixit.com </title>
+    <title>Blog | MihirDixit.com</title>
 
-        <!-- <link rel="preload" as="script" href="/src/scripts/set-theme.js" /> -->
-    </head>
+    <!-- <link rel="preload" as="script" href="/src/scripts/set-theme.js" /> -->
+    <style>
+      .blog {
+        padding: 2rem 0 2rem;
+        max-width: var(--page-width);
+        height: 70vh;
+      }
 
-    <body class="" id="body-theme">
-        <ul class="nav">
-            <li class="nav-item"><a href="/">Home</a>&nbsp;&nbsp;/</li>
-            <li class="nav-item">Blog&nbsp;&nbsp;/</li>
-            <li class="nav-item">
-                <a href="/reading-list/">Reading List</a>&nbsp;&nbsp;/
-            </li>
-            <!-- <li class="nav-item mode-button" id="mode-toggle">🌙</li> -->
-        </ul>
+      .blog p {
+        margin: 0 1rem;
+      }
 
-        <header class="header">
-            <h1 class="page-title">Blog</h1>
-            <p>&nbsp;</p>
-        </header>
+      @media only screen and (max-width: 720px) {
+        .blog {
+          padding: 1rem 0 1rem;
+          height: 70vh;
+        }
 
-        <section class="blog">
-            <p>Coming soon...</p>
-        </section>
+        .blog p {
+          margin: 0 0.5rem;
+        }
+      }
+    </style>
+  </head>
 
-        <footer class="footer">
-            <!-- <p id="end-square">⬜</p> -->
-            <div class="note">
-                <small>&copy; 2024&ndash;2025 Mihir Dixit</small><br />
-            </div>
-        </footer>
+  <body class="" id="body-theme">
+    <Navigation />
 
-        <!-- <script src="/src/scripts/index.js"></script> -->
-    </body>
+    <Header pageTitle="Blog" />
+
+    <section class="blog">
+      <p>Coming soon...</p>
+    </section>
+
+    <Footer />
+
+    <!-- <script src="/src/scripts/index.js"></script> -->
+  </body>
 </html>

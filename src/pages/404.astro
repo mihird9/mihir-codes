@@ -1,43 +1,52 @@
 ---
+import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
 import "../../src/styles/global.css";
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
 
-        <title>404 | Mihir Dixit </title>
+    <title>404 | Mihir Dixit</title>
 
-        <!-- <link rel="preload" as="script" href="/src/scripts/set-theme.js" /> -->
-    </head>
+    <!-- <link rel="preload" as="script" href="/src/scripts/set-theme.js" /> -->
 
-    <body class="" id="body-theme">
-        <ul class="nav">
-            <li class="nav-item"><a href="/">Home</a> &nbsp;&nbsp;/</li>
-            <li class="nav-item"><a href="/blog/">Blog</a>&nbsp;&nbsp;/</li>
-            <li class="nav-item">
-                <a href="/reading-list/">Reading List</a>&nbsp;&nbsp;/
-            </li>
-            <!-- <li class="nav-item mode-button" id="mode-toggle">🌙</li> -->
-        </ul>
+    <style>
+      .page-not-found {
+        margin: 0 1rem;
+        padding: 1rem 0 2rem;
+        max-width: var(--page-width);
+        height: 70vh;
+      }
 
-        <header class="header">
-            <h1 class="page-title">404</h1>
-        </header>
-        <section class="page-not-found">
-            <h2>Page not found</h2>
-            <p>Go back to <a href="/">Homepage</a>.</p>
-        </section>
-        <footer class="footer">
-            <!-- <p id="end-square">⬜</p> -->
-            <div class="note">
-                <small>&copy; 2024&ndash;2025 Mihir Dixit</small>
-            </div>
-        </footer>
+      @media only screen and (max-width: 720px) {
+        .page-not-found {
+          margin: 0 1rem;
+          padding: 1rem 0 1rem;
+          height: 70vh;
+        }
+      }
+    </style>
+  </head>
 
-        <!-- <script src="/src/scripts/index.js"></script> -->
-    </body>
+  <body class="" id="body-theme">
+    <Navigation />
+
+    <Header pageTitle="404" />
+
+    <section class="page-not-found">
+      <h2 class="sec-heading">Page not found</h2>
+      <p>Go back to <a href="/">Homepage</a>.</p>
+    </section>
+
+    <Footer />
+
+    <!-- <script src="/src/scripts/index.js"></script> -->
+  </body>
 </html>

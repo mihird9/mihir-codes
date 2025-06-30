@@ -1,0 +1,54 @@
+---
+import "../../src/styles/global.css";
+---
+
+<style>
+  nav {
+    background-color: white;
+    border-bottom: 1px solid #e6e6e6;
+    z-index: 99;
+    position: sticky;
+    top: 0;
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .nav-item {
+    padding: 0.5rem 1rem;
+    padding-right: 2rem;
+    text-align: left;
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 720px) {
+    .nav-item {
+      padding: 0.5rem 0.5rem;
+    }
+  }
+
+  .nav-item a:any-link {
+    padding: 0.5rem 0;
+    color: #808080;
+    border-bottom: none;
+  }
+
+  .nav-item a:hover {
+    color: var(--font-color-light);
+    /* color: #fd4d0c; */
+  }
+</style>
+
+<nav>
+  <ul class="nav-list">
+    <li class="nav-item"><a href="/">Home</a></li>
+    <li class="nav-item"><a href="/blog/">Blog</a></li>
+    <li class="nav-item">
+      <a href="/reading-list/">Reading List</a>
+    </li>
+  </ul>
+</nav>

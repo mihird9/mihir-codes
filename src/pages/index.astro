@@ -1,4 +1,8 @@
 ---
+import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
 import "../../src/styles/global.css";
 ---
 
@@ -67,24 +71,16 @@ import "../../src/styles/global.css";
   </head>
 
   <body class="" id="body-theme">
-    <ul class="nav">
-      <li class="nav-item">Home&nbsp;&nbsp;/</li>
-      <li class="nav-item"><a href="/blog/">Blog</a>&nbsp;&nbsp;/</li>
-      <li class="nav-item">
-        <a href="/reading-list/">Reading List</a>&nbsp;&nbsp;/
-      </li>
-    </ul>
+    <Navigation />
 
-    <header class="header">
-      <h1 class="page-title">Mihir Dixit</h1>
-      <p class="page-subtitle">
-        Software Developer and Designer, working with small businesses and
-        startups across the world
-      </p>
-    </header>
+    <Header
+      pageTitle="Mihir Dixit"
+      pageSubTitle=`Software Developer and Designer, working with small businesses and startups
+    across the world`
+    />
 
     <section class="about">
-      <h2>About me</h2>
+      <h2 class="sec-heading">About me</h2>
       <!-- <p>
 				I am a <strong
 					>software developer (focused on web development), and web
@@ -138,7 +134,7 @@ import "../../src/styles/global.css";
     </section>
 
     <section class="freelance">
-      <h2>Freelance Services</h2>
+      <h2 class="sec-heading">Freelance Services</h2>
 
       <table class="index-table">
         <tr>
@@ -166,7 +162,7 @@ import "../../src/styles/global.css";
             JavaScript/TypeScript, Unix/Linux and advances in AI and ML.</td
           >
         </tr>
-        <tr>
+        <!-- <tr>
           <td class="col-1"></td>
           <td
             ><br />
@@ -176,14 +172,23 @@ import "../../src/styles/global.css";
               target="_blank"
               class="">Schedule a 15 min call</a
             >
-            <span class="out-arrow">&#8599;</span></td
-          >
-        </tr>
+            <span class="out-arrow">&#8599;</span>
+          </td>
+        </tr> -->
       </table>
+      <p>
+        > Interested in my freelance services?
+        <a
+          href="https://cal.com/mihird9/free-15-min-intro-call-copy"
+          target="_blank"
+          class="">Schedule a 15 min call</a
+        >
+        <span class="out-arrow">&#8599;</span>
+      </p>
     </section>
 
     <section class="projects">
-      <h2>Projects</h2>
+      <h2 class="sec-heading">Projects</h2>
       <p>Adding soon...</p>
       <!-- <div class="project-container">
 				<div class="project-item">
@@ -232,13 +237,7 @@ import "../../src/styles/global.css";
       </table>
     </section> -->
 
-    <footer class="footer">
-      <!-- <p class="end-square">⬜</p> -->
-      <div class="note">
-        <small>&copy; 2024&ndash;2025 Mihir Dixit</small><br />
-        <small>Last updated: 2025-06-21</small>
-      </div>
-    </footer>
+    <Footer />
 
     <!-- <script src="/src/scripts/index.js"></script> -->
   </body>

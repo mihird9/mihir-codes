@@ -1,170 +1,221 @@
 ---
+import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
 import "../../src/styles/global.css";
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
 
-        <meta
-            name="description"
-            content="Some of my favorite articles/blogs from the internet."
-        />
+    <meta
+      name="description"
+      content="Some of my favorite articles/blogs from the internet."
+    />
 
-        <meta name="robots" content="index,follow" />
-        <meta name="googlebot" content="index,follow" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
 
-        <meta name="google" content="nositelinkssearchbox" />
+    <meta name="google" content="nositelinkssearchbox" />
 
-        <link rel="canonical" href="https://mihirdixit.com/reading-list/" />
+    <link rel="canonical" href="https://mihirdixit.com/reading-list/" />
 
-        <!-- Facebook Opengraph Protocol -->
-        <meta property="og:site_name" content="Mihir Codes" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:title" content="Reading List | Mihir Dixit" />
-        <meta
-            property="og:description"
-            content="Some of my favorite articles/blogs from the internet."
-        />
-        <meta
-            property="og:url"
-            content="https://mihirdixit.com/reading-list/"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-            property="og:image"
-            content="https://mihirdixit.com/img/mihircodes_reading-list.png"
-        />
-        <!-- <meta property="og:image:alt" content="" /> -->
+    <!-- Facebook Opengraph Protocol -->
+    <meta property="og:site_name" content="Mihir Codes" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Reading List | Mihir Dixit" />
+    <meta
+      property="og:description"
+      content="Some of my favorite articles/blogs from the internet."
+    />
+    <meta property="og:url" content="https://mihirdixit.com/reading-list/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://mihirdixit.com/img/mihircodes_reading-list.png"
+    />
+    <!-- <meta property="og:image:alt" content="" /> -->
 
-        <!-- Twitter Cards -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:widgets:new-embed-design" content="on" />
-        <meta name="twitter:site" content="@mihirdx" />
-        <meta
-            name="twitter:url"
-            content="https://mihirdixit.com/reading-list/"
-        />
-        <meta name="twitter:title" content="Reading List | Mihir Dixit" />
-        <meta
-            name="twitter:description"
-            content="Some of my favorite articles/blogs from the internet."
-        />
-        <meta
-            name="twitter:image"
-            content="https://mihirdixit.com/img/mihircodes_reading-list.png"
-        />
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:widgets:new-embed-design" content="on" />
+    <meta name="twitter:site" content="@mihirdx" />
+    <meta name="twitter:url" content="https://mihirdixit.com/reading-list/" />
+    <meta name="twitter:title" content="Reading List | Mihir Dixit" />
+    <meta
+      name="twitter:description"
+      content="Some of my favorite articles/blogs from the internet."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mihirdixit.com/img/mihircodes_reading-list.png"
+    />
 
-        <title>Reading List | Mihir Dixit</title>
+    <title>Reading List | Mihir Dixit</title>
 
-        <!-- <link rel="preload" as="script" href="/src/scripts/set-theme.js" /> -->
-    </head>
+    <!-- <link rel="preload" as="script" href="/src/scripts/set-theme.js" /> -->
 
-    <body class="" id="body-theme">
-        <ul class="nav">
-            <li class="nav-item"><a href="/">Home</a>&nbsp;&nbsp;/</li>
-            <li class="nav-item"><a href="/blog/">Blog</a>&nbsp;&nbsp;/</li>
-            <li class="nav-item">Reading List&nbsp;&nbsp;/</li>
-            <!-- <li class="nav-item mode-button" id="mode-toggle">🌙</li> -->
-        </ul>
+    <style>
+      .sec-reading-list {
+        height: 70vh;
+      }
 
-        <header class="header">
-            <h1 class="page-title">Reading List</h1>
-            <p>Some of my favorite articles/blogs from the internet</p>
-        </header>
+      .web-dev {
+        margin: 0 1rem;
+        padding: 1rem 0 2rem;
+        max-width: var(--page-width);
+      }
 
-        <main>
-            <section class="web-dev">
-                <!-- <h2 id="essays">Essays/Blog posts</h2> -->
-                <h2>Web Development</h2>
-                <table class="reading-table">
-                    <!-- <tr>
+      @media only screen and (max-width: 720px) {
+        .web-dev {
+          margin: 0 0.5rem;
+          padding: 1rem 0 1rem;
+        }
+      }
+
+      .web-design {
+        margin: 0 1rem;
+        padding: 1rem 0 2rem;
+        max-width: var(--page-width);
+      }
+
+      @media only screen and (max-width: 720px) {
+        .web-design {
+          margin: 0 0.5rem;
+          padding: 1rem 0 1rem;
+        }
+      }
+
+      .reading-table {
+        margin: 0;
+        border-collapse: collapse;
+        /* width: 90%; */
+      }
+
+      @media only screen and (max-width: 720px) {
+        .reading-table {
+          /* margin: 0 2rem; */
+          /* padding: 0; */
+        }
+      }
+
+      .reading-table tr:hover {
+        background-color: #fffab8;
+      }
+
+      .reading-table td {
+        padding: 0.5rem 0.2rem 0;
+        /* border: 1px solid var(--font-color-light); */
+      }
+
+      .author-col {
+        width: 50%;
+        vertical-align: top;
+      }
+
+      @media only screen and (max-width: 720px) {
+        .author-col {
+          width: 40%;
+          vertical-align: top;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="" id="body-theme">
+    <Navigation />
+
+    <Header
+      pageTitle="Reading List"
+      pageSubTitle=`Some of my favorite articles/blogs from the internet`
+    />
+
+    <main class="sec-reading-list">
+      <section class="web-dev">
+        <!-- <h2 id="essays">Essays/Blog posts</h2> -->
+        <h2>Web Development</h2>
+        <table class="reading-table">
+          <!-- <tr>
                             <th colspan="2">Web Development</th>
                         </tr> -->
-                    <tr>
-                        <td
-                            ><a
-                                href="https://www.kalzumeus.com/2010/04/20/building-highly-reliable-websites-for-small-companies/"
-                                target="_blank"
-                                >Building Highly Reliable Websites For Small
-                                Companies</a
-                            >
-                            <span class="out-arrow">&#8599;</span></td
-                        >
-                        <td class="author-col">Patrick McKenzie</td>
-                    </tr>
-                    <tr>
-                        <td
-                            ><a
-                                href="https://danluu.com/slow-device/"
-                                target="_blank"
-                                >How web bloat impacts users with slow devices</a
-                            >
-                            <span class="out-arrow">&#8599;</span></td
-                        >
-                        <td class="author-col">Dan Luu</td>
-                    </tr>
-                    <tr>
-                        <td
-                            ><a
-                                href="https://idlewords.com/talks/website_obesity.htm"
-                                target="_blank">The Website Obesity Crisis</a
-                            >
-                            <span class="out-arrow">&#8599;</span>
-                        </td>
-                        <td class="author-col">Maciej Cegłowski</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a
-                                href="https://mcfunley.com/choose-boring-technology"
-                                target="_blank">Choose Boring Technology</a
-                            >
-                            <span class="out-arrow">&#8599;</span>
-                        </td>
-                        <td class="author-col">Dan McKinley</td>
-                    </tr>
-                </table>
-            </section>
-            <section class="web-design">
-                <h2>Web Design</h2>
-                <table class="reading-table">
-                    <tr>
-                        <td
-                            ><a
-                                href="https://matthewstrom.com/writing/ui-density/"
-                                target="_blank">UI Density</a
-                            >
-                            <span class="out-arrow">&#8599;</span></td
-                        >
-                        <td class="author-col">Matthew Ström</td>
-                    </tr>
-                    <tr>
-                        <td
-                            ><a
-                                href="https://www.nngroup.com/articles/content-dispersion/"
-                                target="_blank"
-                                >The Negative Impact of Mobile-First Web Design
-                                on Desktop</a
-                            >
-                            <span class="out-arrow">&#8599;</span></td
-                        >
-                        <td class="author-col">Nielsen Norman Group website</td>
-                    </tr>
-                </table>
-            </section>
-        </main>
+          <tr>
+            <td
+              ><a
+                href="https://www.kalzumeus.com/2010/04/20/building-highly-reliable-websites-for-small-companies/"
+                target="_blank"
+                >Building Highly Reliable Websites For Small Companies</a
+              >
+              <span class="out-arrow">&#8599;</span></td
+            >
+            <td class="author-col">Patrick McKenzie</td>
+          </tr>
+          <tr>
+            <td
+              ><a href="https://danluu.com/slow-device/" target="_blank"
+                >How web bloat impacts users with slow devices</a
+              >
+              <span class="out-arrow">&#8599;</span></td
+            >
+            <td class="author-col">Dan Luu</td>
+          </tr>
+          <tr>
+            <td
+              ><a
+                href="https://idlewords.com/talks/website_obesity.htm"
+                target="_blank">The Website Obesity Crisis</a
+              >
+              <span class="out-arrow">&#8599;</span>
+            </td>
+            <td class="author-col">Maciej Cegłowski</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="https://mcfunley.com/choose-boring-technology"
+                target="_blank">Choose Boring Technology</a
+              >
+              <span class="out-arrow">&#8599;</span>
+            </td>
+            <td class="author-col">Dan McKinley</td>
+          </tr>
+        </table>
+      </section>
 
-        <footer class="footer">
-            <!-- <p id="end-square">⬜</p> -->
-            <div class="note">
-                <small>&copy; 2024&ndash;2025 Mihir Dixit</small><br />
-            </div>
-        </footer>
+      <section class="web-design">
+        <h2>Web Design</h2>
+        <table class="reading-table">
+          <tr>
+            <td
+              ><a
+                href="https://matthewstrom.com/writing/ui-density/"
+                target="_blank">UI Density</a
+              >
+              <span class="out-arrow">&#8599;</span></td
+            >
+            <td class="author-col">Matthew Ström</td>
+          </tr>
+          <tr>
+            <td
+              ><a
+                href="https://www.nngroup.com/articles/content-dispersion/"
+                target="_blank"
+                >The Negative Impact of Mobile-First Web Design on Desktop</a
+              >
+              <span class="out-arrow">&#8599;</span></td
+            >
+            <td class="author-col">Nielsen Norman Group website</td>
+          </tr>
+        </table>
+      </section>
+    </main>
 
-        <!-- <script src="/src/scripts/index.js"></script> -->
-    </body>
+    <Footer />
+
+    <!-- <script src="/src/scripts/index.js"></script> -->
+  </body>
 </html>
