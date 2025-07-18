@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://mihircodes.com
+Host: https://mihirdixit.com
 
 # Sitemaps
-# Sitemap: https://mihircodes.com/sitemap.xml
+# Sitemap: https://mihirdixit.com/sitemap.xml
